@@ -1,0 +1,14 @@
+services:
+  edge:
+    container_name: n3n-edge
+    build:
+      context: ..
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./config:/etc/n3n:ro
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    cap_add:
+      - NET_ADMIN
+
+    command: [ "n3n-edge", "start" ]

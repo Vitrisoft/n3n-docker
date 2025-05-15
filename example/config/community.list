@@ -1,0 +1,5 @@
+#
+# List of allowed communities
+# ---------------------------
+
+home 192.168.168.0/24
