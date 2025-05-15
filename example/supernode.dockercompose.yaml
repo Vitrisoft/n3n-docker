@@ -1,0 +1,10 @@
+services:
+  supernode:
+    image: vitrisoft/n3n:latest
+    ports:
+      - "7777:7777"
+      - "7777:7777/udp"
+    volumes:
+      - ./config:/etc/n3n:ro
+
+    command: [ "n3n-supernode", "start" ]
