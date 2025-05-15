@@ -9,4 +9,4 @@ services:
     cap_add:
       - NET_ADMIN
 
-    command: [ "n3n-edge", "start" ]
+    command: [ "n3n-edge", "start", "mynetwork" ]
